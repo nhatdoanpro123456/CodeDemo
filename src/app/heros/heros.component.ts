@@ -33,11 +33,14 @@ export class HerosComponent implements OnInit {
      );
    }
    addHero (){
-    this.hero.push({
-      id: this.hero.length + 1,
-      name: this.newHero
-    })
-     console.log(arrayHero);
+     if(this.newHero){
+      this.hero.push({
+        id: this.hero.length + 1,
+        name: this.newHero
+      })
+     }
+     this.newHero = '';
+    //  console.log(arrayHero);
    }
 
   ngOnInit() {
