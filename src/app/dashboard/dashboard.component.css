@@ -1,0 +1,29 @@
+a{
+  text-decoration: none;
+}
+.col-1-5 {
+  float: left;
+}
+[class*="col-"]:last-of-type{
+  padding-right: 0px;
+}
+.hero-box{
+  padding: 20px;
+  text-align: center;
+  color: aliceblue;
+  width: 150px;
+  height: 100px;
+  background: blueviolet;
+  border-radius: 15px;
+  padding-top: 25px;
+}
+.hero-box:hover{
+  background: blue;
+  cursor: pointer;
+  color: aliceblue;
+}
+
+.row{
+  flex-wrap: wrap;
+
+}

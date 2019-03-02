@@ -1,0 +1,28 @@
+
+h1{
+  color: red;
+  text-align: center;
+}
+.rt{
+  border: none;
+  margin-left: 50px;
+}
+.rt:hover{
+  color: red;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.db{
+  border: none;
+}
+.db:hover{
+  color: red;
+  cursor: pointer;
+  box-sizing: content-box;
+}
+.row{
+  margin-left: 0px;
+  color: brown;
+  font-weight: 900;
+}
+

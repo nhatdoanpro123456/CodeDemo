@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row">
+      <div *ngIf="hero" class="details"  style="width: 400px;">
+          <h3>You Selected: {{hero.name}}</h3>
+          <table class="table table-hover">
+            <tbody>
+              <tr>
+                <td>ID</td>
+                <td>{{hero.id}}</td>
+              </tr>
+              <tr>
+                  <td>Name</td>
+                  <td>
+                      <input class="form-control" [(ngModel)] = "hero.name" >
+                  </td>
+                </tr>
+            </tbody>
+          </table>
+          <button (click)='goBack()'>Back</button>
+        </div>
+  </div>
+</div>
+
+
+
+

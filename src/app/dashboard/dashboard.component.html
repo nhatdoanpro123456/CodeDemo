@@ -1,0 +1,11 @@
+<h2 style="text-align: center">Top Heroes</h2>
+<div class="container">
+  <div class="row">
+          <a *ngFor="let hero of heroes" class="col-1-5 col-md-2" routerLink="/detail/{{hero.id}}" >
+          <div class="hero-box">
+            <span>{{hero.name}}</span>
+          </div>
+        </a>
+  </div>
+</div>
+

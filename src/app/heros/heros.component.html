@@ -1,0 +1,39 @@
+<div class="container">
+  <table class="table table-hover" style="width: 400px;background-color: cadetblue;border-radius: 20px;">
+        <tr>
+            <td>ID</td>
+            <td><input type="text" class="form-control" #newIdHero ></td>
+          </tr>
+        <tr>
+          <td>Name</td>
+          <td><input type="text" class="form-control" #newNameHero ></td>
+        </tr>
+        <button class="btn btn-success" style="float: right"
+                (click)="addHero(newIdHero.value,newNameHero.value)">Add</button>
+  </table>
+</div>
+
+<div class="container">
+    <div *ngIf="showHero" class=app>
+        <ul class="heroes" style="list-style: none">
+            <li *ngFor="let eachHero of hero">
+             <div class="list" routerLink = "/detail/{{eachHero.id}}" >
+              <div class="idHero">{{eachHero.id}}</div>
+              <div class="heroName">{{eachHero.name}}</div>
+              <button type="button" class="btn btn-danger" (click)="delHero()">Del</button>
+            </div>
+
+
+          </li>
+          </ul>
+    </div>
+    <button type="button" class="btn btn-warning"  *ngIf="!showHero" (click)="onShow()">Show Hero</button>
+    <button type="button" class="btn btn-warning" *ngIf="showHero"  (click)="onShow() ">Hidden Hero</button>
+</div>
+
+
+
+
+
+
+
