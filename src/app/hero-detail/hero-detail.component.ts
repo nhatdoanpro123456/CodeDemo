@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Hero } from '../hero/hero';
+import {arrayHero} from '../hero_details';
 //route
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
@@ -12,6 +13,8 @@ import { HeroService } from '../hero.service';
 })
 export class HeroDetailComponent implements OnInit {
   @Input()hero:Hero;
+  arrHero:Hero[];
+  length = arrayHero.length;
   constructor(
     private route: ActivatedRoute,
     private heroService: HeroService,
@@ -31,5 +34,10 @@ export class HeroDetailComponent implements OnInit {
   }
   goBack():void {
     this.location.back();
+  }
+
+  onDel(index:number){
+    index = arrayHero.findIndex(hero => hero.id === index);
+    arrayHero.splice(index,1);
   }
 }

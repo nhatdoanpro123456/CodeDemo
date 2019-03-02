@@ -16,6 +16,7 @@ export class HerosComponent implements OnInit {
   selectedHero:Hero;
   hero: Hero[];
   showHero = true;
+  newHero='';
   constructor(private heroService: HeroService) {
 
    }
@@ -31,19 +32,14 @@ export class HerosComponent implements OnInit {
        }
      );
    }
-   addHero (newIdHero: string,newNameHero: string){
-     const obj = new Hero(parseInt(newIdHero),newNameHero);
-     if(newIdHero && newNameHero){
-       arrayHero.push(obj);
-     }
+   addHero (){
+    this.hero.push({
+      id: this.hero.length + 1,
+      name: this.newHero
+    })
      console.log(arrayHero);
    }
 
-   delHero(id:any){
-    // let index = this.hero.findIndex(eachHero => eachHero.id ===index);
-    // console.log(index);
-    // this.hero.splice(index,1);
-   }
   ngOnInit() {
     this.getHeroFromServices();
   }
